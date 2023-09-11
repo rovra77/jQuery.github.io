@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mijn eerste jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#knop1").click(function () {
+                $("#welkomTekst").text("Welkom bij mijn eerste jQuery");
+            });
+            
+            $("#knop2").click(function () {
+                var leeftijd = $("#idTekstveld1").val();
+                var beroep = $("#idTekstveld2").val();
+                var sportschool = $("#idTekstveld3").val();
+                
+                window.alert(
+                    "Mijn leeftijd is " + leeftijd + " jaar" +
+                    " en ik ben van beroep" + beroep +
+                    " en ik train " + sportschool + " keer in de week in de sportschool"
+                );
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1>Mijn eerste jQuery toepassing</h1>
+        <button id="knop1">Klik hier snel voor welkomsttekst!!</button>
+        <p id="welkomTekst"></p>
+    </div>
+
+    <form>
+        Wat is uw leeftijd?
+        <input type="text" id="idTekstveld1"><br><br>
+        Wat is uw beroep?
+        <input type="text" id="idTekstveld2"><br><br>
+        Hoe vaak gaat u naar de sportschool in de week?
+        <input type="text" id="idTekstveld3"><br><br>
+        <input id="knop2" name="knop2" type="button" value="Verzend">
+       </form>
+</body>
+</html>
